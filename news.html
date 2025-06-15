@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cimory Squeeze - NEWS</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f7f7f7;
+        }
+        .header-bg {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .footer-bg {
+            background-color: #202A4D;
+            color: #ffffff;
+        }
+        .btn-primary {
+            background-color: #56C0E0;
+            color: #ffffff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #40A8C0;
+        }
+        .text-primary-blue {
+            color: #202A4D;
+        }
+        .text-secondary-blue {
+            color: #56C0E0;
+        }
+        .news-card {
+            background-color: #ffffff;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .news-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .news-image {
+            width: 100%;
+            height: 180px; /* Fixed height for images */
+            object-fit: cover;
+            border-top-left-radius: 1.5rem;
+            border-top-right-radius: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation Bar -->
+    <header class="header-bg p-4 shadow-md">
+        <nav class="container mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <img src="assets/images/logo-cimory.png" alt="Cimory Logo" class="h-20">
+                <span class="text-xl font-bold text-primary-blue">Cimory</span>
+            </div>
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="text-primary-blue hover:text-secondary-blue font-semibold">HOME</a></li>
+                <li><a href="menu.html" class="text-primary-blue hover:text-secondary-blue font-semibold">MENU</a></li>
+                <li><a href="galeri.html" class="text-primary-blue hover:text-secondary-blue font-semibold">GALERI</a></li>
+                <li><a href="news.html" class="text-primary-blue hover:text-secondary-blue font-semibold">NEWS</a></li>
+                <li><a href="lokasi.html" class="text-primary-blue hover:text-secondary-blue font-semibold">LOKASI</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="py-16 md:py-24">
+        <section class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold leading-tight text-primary-blue mb-12">
+                Scroll Berita Terbaru Yuk!
+            </h1>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Berita 1 -->
+                <div class="news-card">
+                    <img src="assets/images/menang.png" alt="Cimory Memenangkan Penghargaan" class="news-image">
+                    <div class="p-6 text-left">
+                        <h2 class="text-xl font-bold text-primary-blue mb-2">Cimory Memenangkan ...</h2>
+                        <p class="text-gray-700 text-sm mb-4">Klik untuk baca berita.</p>
+                        <!-- Space untuk Insert Link Berita -->
+                        <a href="https://cimory.com/news-detail.php?news_id=19" target="_blank" class="btn-primary inline-block text-sm">Baca Selengkapnya &gt;&gt;&gt;</a>
+                    </div>
+                </div>
+
+                <!-- Berita 2 -->
+                <div class="news-card">
+                    <img src="assets/images/rapat.png" alt="Cimory Resmi Gelar Acara" class="news-image">
+                    <div class="p-6 text-left">
+                        <h2 class="text-xl font-bold text-primary-blue mb-2">Cimory Resmi Gelar ...</h2>
+                        <p class="text-gray-700 text-sm mb-4">Klik untuk baca berita.</p>
+                        <!-- Space untuk Insert Link Berita -->
+                        <a href="https://cimory.com/news-detail.php?news_id=21" target="_blank" class="btn-primary inline-block text-sm">Baca Selengkapnya &gt;&gt;&gt;</a>
+                    </div>
+                </div>
+
+                <!-- Berita 3 -->
+                <div class="news-card">
+                    <img src="assets/images/esg.png" alt="Cimory Masuk Daftar ESG Leaders" class="news-image">
+                    <div class="p-6 text-left">
+                        <h2 class="text-xl font-bold text-primary-blue mb-2">Cimory Masuk ke Daftar ...</h2>
+                        <p class="text-gray-700 text-sm mb-4">Klik untuk baca berita.</p>
+                        <!-- Space untuk Insert Link Berita -->
+                        <a href="https://cimory.com/news-detail.php?news_id=22" target="_blank" class="btn-primary inline-block text-sm">Baca Selengkapnya &gt;&gt;&gt;</a>
+                    </div>
+                </div>
+                
+                <!-- Anda bisa menambahkan lebih banyak kartu berita di sini -->
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-bg py-8 text-center text-sm mt-16">
+        <div class="container mx-auto px-4">
+            <p>&copy; Portofolio Cimory by Umu Afifah. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

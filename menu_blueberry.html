@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cimory Squeeze - Blueberry</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f7f7f7;
+        }
+        .header-bg {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .footer-bg {
+            background-color: #202A4D;
+            color: #ffffff;
+        }
+        .text-primary-blue {
+            color: #202A4D;
+        }
+        .text-secondary-blue {
+            color: #56C0E0;
+        }
+        .product-image {
+            width: 50%; /* Adjust size */
+            height: auto;
+            /* ✅ Rotasi gambar produk, menggunakan -15deg sesuai input terbaru Anda */
+            transform: rotate(-15deg);
+            transition: transform 0.3s ease;
+            position: relative; /* Penting untuk z-index */
+            z-index: 10; /* Pastikan di atas splash */
+        }
+        .variant-thumb {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            transition: border-color 0.3s ease;
+            cursor: pointer;
+            object-fit: contain; /* Ensure image fits */
+        }
+        .variant-thumb.active {
+            border-color: #56C0E0;
+        }
+
+        /* Gaya tambahan untuk percikan susu di halaman menu detail */
+        .menu-splash {
+            position: absolute;
+            z-index: 5; /* Di bawah gambar produk, di atas latar belakang */
+            opacity: 0.9;
+            pointer-events: none;
+        }
+        /* ✅ DIUBAH: strawleft.jfif di kiri bawah */
+        .menu-splash-top-left { /* Nama kelas ini tetap, tapi posisinya di kiri bawah */
+            bottom: 5%; /* Geser ke bawah */
+            left: 0%; /* Geser ke kiri */
+            top: auto; /* Reset top */
+            right: auto; /* Reset right */
+            width: 30%;
+            transform: rotate(-105deg); /* Sesuaikan rotasi */
+        }
+        /* ✅ DIUBAH: strawright.jfif di kanan atas */
+        .menu-splash-bottom-right { /* Nama kelas ini tetap, tapi posisinya di kanan atas */
+            top: 5%; /* Geser ke atas */
+            right: 0%; /* Geser ke kanan */
+            bottom: auto; /* Reset bottom */
+            left: auto; /* Reset left */
+            width: 30%;
+            transform: rotate(55deg); /* Sesuaikan rotasi */
+        }
+
+        /* Responsive adjustments for splashes */
+        @media (max-width: 768px) {
+            .product-image {
+                width: 70%; /* Lebih besar di mobile */
+            }
+            .menu-splash-top-left { /* Sekarang kiri bawah untuk mobile */
+                bottom: 0%;
+                left: -2%;
+                top: auto;
+                right: auto;
+                width: 40%; /* Ukuran disesuaikan untuk mobile */
+                transform: rotate(-15deg);
+            }
+            .menu-splash-bottom-right { /* Sekarang kanan atas untuk mobile */
+                top: 0%;
+                right: -2%;
+                bottom: auto;
+                left: auto;
+                width: 40%; /* Ukuran disesuaikan untuk mobile */
+                transform: rotate(15deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation Bar -->
+    <header class="header-bg p-4 shadow-md">
+        <nav class="container mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <img src="assets/images/logo-cimory.png" alt="Cimory Logo" class="h-20">
+                <span class="text-xl font-bold text-primary-blue">Cimory</span>
+            </div>
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="text-primary-blue hover:text-secondary-blue font-semibold">HOME</a></li>
+                <li><a href="menu.html" class="text-primary-blue hover:text-secondary-blue font-semibold">MENU</a></li>
+                <li><a href="galeri.html" class="text-primary-blue hover:text-secondary-blue font-semibold">GALERI</a></li>
+                <li><a href="news.html" class="text-primary-blue hover:text-secondary-blue font-semibold">NEWS</a></li>
+                <li><a href="lokasi.html" class="text-primary-blue hover:text-secondary-blue font-semibold">LOKASI</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="py-16 md:py-24 bg-white">
+        <section class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-12">
+            <div class="md:w-1/2 flex justify-center relative"> <!-- Parent ini harus relative untuk absolute positioning splash -->
+                <!-- ✅ Percikan susu kiri bawah (sebelumnya kiri atas) -->
+                <img src="assets/images/blueleft.jfif" alt="Percikan Susu Kiri Bawah" class="menu-splash menu-splash-top-left">
+                
+                <img src="assets/images/2.png" alt="Cimory Squeeze Original Product" class="product-image">
+
+                <!-- ✅ Percikan susu kanan atas (sebelumnya kanan bawah) -->
+                <img src="assets/images/blueright.jfif" alt="Percikan Susu Kanan Atas" class="menu-splash menu-splash-bottom-right">
+            </div>
+            <div class="md:w-1/2 text-center md:text-left">
+                <h1 class="text-4xl md:text-5xl font-bold text-primary-blue mb-4">
+                    Cimory Yogurt Squeeze <br> ~ Blueberry
+                </h1>
+                <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                    Kesegaran murni dalam setiap genggaman. Rasakan kebaikan yogurt Cimory yang otentik dan tak tertandingi.
+                </p>
+                <h2 class="text-2xl font-bold text-primary-blue mb-3">Komposisi:</h2>
+                <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                    Terbuat dari Susu Sapi Segar, Kultur Bakteri Hidup, Gula, Buah Blueberry Asli, Penstabil Nabati, Perisa Alami Blueberi.
+                </p>
+
+                <!-- Varian Thumbnail Navigation -->
+                <div class="flex flex-wrap justify-center md:justify-start gap-4 mt-8">
+                    <img src="assets/images/1.png" alt="Original" class="variant-thumb" onclick="location.href='menu_original.html'">
+                    <img src="assets/images/2.png" alt="Blueberry" class="variant-thumb active" onclick="location.href='menu_blueberry.html'">
+                    <img src="assets/images/3.png" alt="Strawberry" class="variant-thumb" onclick="location.href='menu_strawberry.html'">
+                    <img src="assets/images/4.png" alt="Mango" class="variant-thumb" onclick="location.href='menu_mango.html'">
+                    <img src="assets/images/5.png" alt="Taro" class="variant-thumb" onclick="location.href='menu_taro.html'">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-bg py-8 text-center text-sm mt-16">
+        <div class="container mx-auto px-4">
+            <p>&copy; Portofolio Cimory by Umu Afifah. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

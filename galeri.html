@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cimory Squeeze - Galeri Wisata</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f7f7f7;
+        }
+        .header-bg {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .footer-bg {
+            background-color: #202A4D;
+            color: #ffffff;
+        }
+        .btn-primary {
+            background-color: #56C0E0;
+            color: #ffffff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #40A8C0;
+        }
+        .text-primary-blue {
+            color: #202A4D;
+        }
+        .text-secondary-blue {
+            color: #56C0E0;
+        }
+        .gallery-card {
+            background-color: #ffffff;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .gallery-image {
+            width: 100%;
+            height: 200px; /* Fixed height for consistency */
+            object-fit: cover; /* Crop to cover */
+            border-top-left-radius: 1.5rem;
+            border-top-right-radius: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation Bar -->
+    <header class="header-bg p-4 shadow-md">
+        <nav class="container mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <img src="assets/images/logo-cimory.png" alt="Cimory Logo" class="h-20">
+                <span class="text-xl font-bold text-primary-blue">Cimory</span>
+            </div>
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="text-primary-blue hover:text-secondary-blue font-semibold">HOME</a></li>
+                <li><a href="menu.html" class="text-primary-blue hover:text-secondary-blue font-semibold">MENU</a></li>
+                <li><a href="galeri.html" class="text-primary-blue hover:text-secondary-blue font-semibold">GALERI</a></li>
+                <li><a href="news.html" class="text-primary-blue hover:text-secondary-blue font-semibold">NEWS</a></li>
+                <li><a href="lokasi.html" class="text-primary-blue hover:text-secondary-blue font-semibold">LOKASI</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="py-16 md:py-24">
+        <section class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold leading-tight text-primary-blue mb-12">
+                Liburan ke Galeri Dairyland Yuk!
+            </h1>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card Cimory Dairyland Puncak -->
+                <div class="gallery-card">
+                    <img src="assets/images/puncak.jfif" alt="Cimory Dairyland Puncak" class="gallery-image">
+                    <div class="p-6 text-left">
+                        <h2 class="text-2xl font-bold text-primary-blue mb-2">Cimory Dairyland Puncak</h2>
+                        <p class="text-gray-700 text-sm mb-2">Cipayung Girang, Megamendung, Bogor. Jawa Barat, Indonesia, 16770</p>
+                        <p class="text-gray-700 text-sm mb-2">Nomor Telepon: 0897654321</p>
+                        <p class="text-gray-700 text-sm mb-4">Harga: Rp30.000-Rp85.000</p>
+                        <a href="https://www.traveloka.com/id-id/activities/indonesia/product/cimory-dairyland-puncak-tickets-2000624237599" target="_blank" class="btn-primary inline-block text-sm">Pesan Sekarang</a>
+                    </div>
+                </div>
+
+                <!-- Card Cimory Dairyland On The Valley -->
+                <div class="gallery-card">
+                    <img src="assets/images/smg.jfif" alt="Cimory Dairyland On The Valley" class="gallery-image">
+                    <div class="p-6 text-left">
+                        <h2 class="text-2xl font-bold text-primary-blue mb-2">Cimory Dairyland On The Valley</h2>
+                        <p class="text-gray-700 text-sm mb-2">Begojuh, Jatijajar, Kec. Bergas, Semarang. Jawa Tengah 50552</p>
+                        <p class="text-gray-700 text-sm mb-2">Nomor Telepon: 0897654321</p>
+                        <p class="text-gray-700 text-sm mb-4">Harga: Rp30.000-Rp85.000</p>
+                        <a href="https://www.traveloka.com/id-id/activities/indonesia/product/cimory-dairyland-on-the-valley-semarang-tickets-2000624237599" target="_blank" class="btn-primary inline-block text-sm">Pesan Sekarang</a>
+                    </div>
+                </div>
+
+                <!-- Card Cimory Dairyland Riverside -->
+                <div class="gallery-card">
+                    <img src="assets/images/river.jfif" alt="Cimory Dairyland Riverside" class="gallery-image">
+                    <div class="p-6 text-left">
+                        <h2 class="text-2xl font-bold text-primary-blue mb-2">Cimory Dairyland Riverside</h2>
+                        <p class="text-gray-700 text-sm mb-2">Kelurahan Leuwimalang, Kecamatan Cisarua, Kabupaten Bogor, Jawa Barat.</p>
+                        <p class="text-gray-700 text-sm mb-2">Nomor Telepon: 081388938607</p>
+                        <p class="text-gray-700 text-sm mb-4">Harga: Rp30.000-Rp85.000</p>
+                        <a href="https://www.traveloka.com/id-id/activities/indonesia/product/cimory-dairyland-riverside-tickets-2000624237599" target="_blank" class="btn-primary inline-block text-sm">Pesan Sekarang</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-bg py-8 text-center text-sm mt-16">
+        <div class="container mx-auto px-4">
+            <p>&copy; Portofolio Cimory by Umu Afifah. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

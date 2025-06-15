@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cimory Squeeze - Menu</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f7f7f7;
+        }
+        .header-bg {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .footer-bg {
+            background-color: #202A4D;
+            color: #ffffff;
+        }
+        .btn-primary {
+            background-color: #56C0E0;
+            color: #ffffff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #40A8C0;
+        }
+        .text-primary-blue {
+            color: #202A4D;
+        }
+        .text-secondary-blue {
+            color: #56C0E0;
+        }
+        .variant-card {
+            background-color: #ffffff;
+            border-radius: 1.5rem; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        .variant-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .variant-image {
+            width: 80%; /* Adjust size */
+            height: auto;
+            border-radius: 1.5rem; /* Ensure rounded image */
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation Bar -->
+    <header class="header-bg p-4 shadow-md">
+        <nav class="container mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <img src="assets/images/logo-cimory.png" alt="Cimory Logo" class="h-20">
+                <span class="text-xl font-bold text-primary-blue">Cimory</span>
+            </div>
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="text-primary-blue hover:text-secondary-blue font-semibold">HOME</a></li>
+                <li><a href="menu.html" class="text-primary-blue hover:text-secondary-blue font-semibold">MENU</a></li>
+                <li><a href="galeri.html" class="text-primary-blue hover:text-secondary-blue font-semibold">GALERI</a></li>
+                <li><a href="news.html" class="text-primary-blue hover:text-secondary-blue font-semibold">NEWS</a></li>
+                <li><a href="lokasi.html" class="text-primary-blue hover:text-secondary-blue font-semibold">LOKASI</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="py-16 md:py-24">
+        <section class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold leading-tight text-primary-blue mb-4">
+                Pilih Varian Yang <br> Mau Kepoin!
+            </h1>
+            <p class="text-lg text-gray-700 mb-8">
+                Ada banyak varian rasa lho! <br> Cobain satu-satu dijamin ketagihan deh!
+            </p>
+
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 max-w-4xl mx-auto">
+                <!-- Varian Original -->
+                <div class="variant-card p-4" onclick="location.href='menu_original.html'">
+                    <img src="assets/images/1.png" alt="Cimory Squeeze Original" class="variant-image mb-4">
+                    <p class="text-primary-blue font-semibold">Original</p>
+                </div>
+                <!-- Varian Blueberry -->
+                <div class="variant-card p-4" onclick="location.href='menu_blueberry.html'">
+                    <img src="assets/images/2.png" alt="Cimory Squeeze Blueberry" class="variant-image mb-4">
+                    <p class="text-primary-blue font-semibold">Blueberry</p>
+                </div>
+                <!-- Varian Strawberry -->
+                <div class="variant-card p-4" onclick="location.href='menu_strawberry.html'">
+                    <img src="assets/images/3.png" alt="Cimory Squeeze Strawberry" class="variant-image mb-4">
+                    <p class="text-primary-blue font-semibold">Strawberry</p>
+                </div>
+                <!-- Varian Mango -->
+                <div class="variant-card p-4" onclick="location.href='menu_mango.html'">
+                    <img src="assets/images/4.png" alt="Cimory Squeeze Mango" class="variant-image mb-4">
+                    <p class="text-primary-blue font-semibold">Mango</p>
+                </div>
+                <!-- Varian Taro -->
+                <div class="variant-card p-4" onclick="location.href='menu_taro.html'">
+                    <img src="assets/images/5.png" alt="Cimory Squeeze Taro" class="variant-image mb-4">
+                    <p class="text-primary-blue font-semibold">Taro</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-bg py-8 text-center text-sm mt-16">
+        <div class="container mx-auto px-4">
+            <p>&copy; Portofolio Cimory by Umu Afifah. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

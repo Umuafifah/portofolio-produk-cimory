@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cimory Squeeze - Home</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f7f7f7; /* Warna latar belakang umum */
+        }
+        .header-bg {
+            background-color: #ffffff; /* Latar belakang header putih */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bayangan ringan */
+        }
+        .footer-bg {
+            background-color: #202A4D; /* Warna biru gelap dari desain */
+            color: #ffffff;
+        }
+        .btn-primary {
+            background-color: #56C0E0; /* Warna biru cerah */
+            color: #ffffff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px; /* Rounded full */
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #40A8C0; /* Warna biru lebih gelap saat hover */
+        }
+        .text-primary-blue {
+            color: #202A4D; /* Biru gelap utama */
+        }
+        .text-secondary-blue {
+            color: #56C0E0; /* Biru cerah sekunder */
+        }
+        .rounded-hero-image {
+            border-radius: 2rem; /* Border radius lebih besar */
+        }
+        /* Kelas untuk memastikan gambar ikon fitur memiliki ukuran yang sama */
+        .feature-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 0.5rem;
+            object-fit: contain;
+        }
+        /* Gaya tambahan untuk percikan susu */
+        .milk-splash {
+            position: absolute;
+            z-index: 1; /* Di atas shadow, di bawah produk utama */
+            opacity: 0.8; /* Sedikit transparansi */
+            pointer-events: none; /* Agar tidak menghalangi klik/interaksi */
+        }
+        .milk-splash-left {
+            top: 10%;
+            left: 5%;
+            width: 30%; /* Ukuran relatif */
+            transform: rotate(-15deg);
+        }
+        .milk-splash-right {
+            bottom: 10%;
+            right: 5%;
+            width: 30%; /* Ukuran relatif */
+            transform: rotate(15deg);
+        }
+        /* Gaya tambahan untuk background shadow */
+        .bg-milk-shadow {
+            position: absolute;
+            z-index: 0; /* Pastikan di paling belakang */
+            width: 120%; /* Ukuran lebih besar */
+            height: auto;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Pusatkan */
+            opacity: 0.9; /* Sedikit transparansi */
+            pointer-events: none;
+        }
+        /* Responsive adjustments for splashes and shadow */
+        @media (max-width: 768px) { /* Adjust for smaller screens like mobile */
+            .milk-splash-left {
+                top: 5%;
+                left: 0%;
+                width: 25%;
+            }
+            .milk-splash-right {
+                bottom: 5%;
+                right: 0%;
+                width: 25%;
+            }
+            .bg-milk-shadow {
+                width: 110%; /* Ukuran lebih besar untuk mobile */
+            }
+        }
+
+        /* Custom text shadow utilities for visibility */
+        .text-shadow-sm {
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+        }
+        .text-shadow-md {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Kelas baru untuk latar belakang biru yang lebih tua di bagian About Us */
+        .bg-about-us-dark {
+            background-color: #1A233D; /* Warna biru yang lebih tua dari #202A4D */
+        }
+
+        /* Kelas baru untuk ikon kontak (telepon, email, instagram) */
+        .contact-icon {
+            width: 28px; /* Ukuran sedikit lebih besar dari feature-icon agar menonjol */
+            height: 28px;
+            display: inline-block; /* Agar bisa sejajar dengan teks */
+            vertical-align: middle; /* Agar sejajar vertikal dengan teks */
+            margin-right: 0.5rem; /* Jarak dari teks */
+            object-fit: contain;
+        }
+
+        /* Penyesuaian ukuran product-image (ini tidak mempengaruhi hero image) */
+        .product-image {
+            width: 35%; /* Ukuran lebih kecil untuk desktop */
+        }
+        @media (max-width: 768px) {
+            .product-image {
+                width: 50%; /* Ukuran lebih kecil untuk mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation Bar -->
+    <header class="header-bg p-4 shadow-md">
+        <nav class="container mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <img src="assets/images/logo-cimory.png" alt="Cimory Logo" class="h-20">
+                <span class="text-xl font-bold text-primary-blue">Cimory</span>
+            </div>
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="text-primary-blue hover:text-secondary-blue font-semibold">HOME</a></li>
+                <li><a href="menu.html" class="text-primary-blue hover:text-secondary-blue font-semibold">MENU</a></li>
+                <li><a href="galeri.html" class="text-primary-blue hover:text-secondary-blue font-semibold">GALERI</a></li>
+                <li><a href="news.html" class="text-primary-blue hover:text-secondary-blue font-semibold">NEWS</a></li>
+                <li><a href="lokasi.html" class="text-primary-blue hover:text-secondary-blue font-semibold">LOKASI</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative bg-white py-16 md:py-24 z-10"> <!-- Ditambahkan z-10 agar di bawah About Us -->
+            <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
+                <div class="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight text-primary-blue mb-4">
+                        Enaknya Tinggal <br> Nge-squeeze!
+                    </h1>
+                    <div class="text-lg text-gray-700 space-y-2">
+                        <p class="flex items-center justify-center md:justify-start">
+                            <img src="assets/images/iconsmooth.png" alt="Icon Creamy" class="feature-icon">
+                            Creamy and Smooth
+                        </p>
+                        <p class="flex items-center justify-center md:justify-start">
+                            <img src="assets/images/iconsqueeze.png" alt="Icon Squeeze" class="feature-icon">
+                            Tinggal Squeeze
+                        </p>
+                        <p class="flex items-center justify-center md:justify-start">
+                            <img src="assets/images/iconsimple.png" alt="Icon Easy" class="feature-icon">
+                            Gak Perlu Ribet
+                        </p>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center relative">
+                    <!-- Background shadow -->
+                    <img src="assets/images/bgmilk.png" alt="Background Percikan Susu" class="bg-milk-shadow">
+                    
+                    <!-- Percikan susu kiri -->
+                    <img src="assets/images/milksplashleft.png" alt="Percikan Susu Kiri" class="milk-splash milk-splash-left">
+                    
+                    <img src="assets/images/1.png" alt="Cimory Squeeze Original" class="w-full max-w-xs rounded-hero-image transform -rotate-3 hover:rotate-0 transition-transform duration-300 ease-in-out z-20"> <!-- ✅ DIUBAH: max-w-sm menjadi max-w-xs -->
+
+                    <!-- Percikan susu kanan -->
+                    <img src="assets/images/milksplashright.png" alt="Percikan Susu Kanan" class="milk-splash milk-splash-right">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section class="relative z-30 bg-about-us-dark py-16 md:py-24 text-white text-center -mt-16 md:-mt-24"> 
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-shadow-md">Tentang Kami:</h2>
+                <p class="text-lg leading-relaxed max-w-3xl mx-auto text-shadow-sm">
+                    Kami berkomitmen memberikan yang terbaik untuk kebaikan Anda. Cimory menghadirkan
+                    inovasi produk, layanan unggul, dan kenyamanan di setiap momen. Dengan semangat baru
+                    ini, kami terus berinovasi. Dapatkan pengalaman yang segar dan baru bersama kami –
+                    Cimory Squeeze.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="bg-white py-16 md:py-24">
+            <div class="container mx-auto flex flex-col md:flex-row items-start justify-between px-4">
+                <div class="md:w-1/2 mb-8 md:mb-0 text-center md:text-left">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary-blue mb-6">Tinggalkan Pesan Untuk Kami</h2>
+                    <form class="space-y-4 max-w-md mx-auto md:mx-0">
+                        <div>
+                            <label for="name" class="block text-gray-700 text-sm font-semibold mb-2">Nama:</label>
+                            <input type="text" id="name" class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-secondary-blue focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 text-sm font-semibold mb-2">Email:</label>
+                            <input type="email" id="email" class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-secondary-blue focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 text-sm font-semibold mb-2">Pesan Kamu:</label>
+                            <textarea id="message" rows="5" class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-secondary-blue focus:border-transparent"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary w-full md:w-auto">Kirim</button>
+                    </form>
+                </div>
+                <div class="md:w-1/2 flex flex-col items-center md:items-end text-center md:text-right">
+                    <h3 class="text-2xl font-bold text-primary-blue mb-4">Kontak Kami</h3>
+                    <p class="text-lg text-gray-700 mb-2">
+                        <!-- ICON TELEPON - DIUBAH KE IMG -->
+                        <img src="assets/images/phone.png" alt="Icon Telepon" class="contact-icon">
+                        (011) 23456789
+                    </p>
+                    <p class="text-lg text-gray-700 mb-2">
+                        <!-- ICON EMAIL - DIUBAH KE IMG -->
+                        <img src="assets/images/email.png" alt="Icon Email" class="contact-icon">
+                        cimory@gmail.com
+                    </p>
+                    <p class="text-lg text-gray-700">
+                        <!-- ICON INSTAGRAM - DIUBAH KE IMG -->
+                        <img src="assets/images/instagram.png" alt="Icon Instagram" class="contact-icon">
+                        @cimory.indonesia
+                    </p>
+                    <p class="text-lg text-gray-700">
+                        <!-- ICON CS - DIUBAH KE IMG -->
+                        <img src="assets/images/customer-service.png" alt="Icon customer-service" class="contact-icon">
+                        Customer Service
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-bg py-8 text-center text-sm">
+        <div class="container mx-auto px-4">
+            <p>&copy; Portofolio Cimory by Umu Afifah. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
