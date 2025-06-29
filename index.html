@@ -10,11 +10,16 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f7f7f7; /* Warna latar belakang umum */
+            background-color: #f7f7f7; 
+            padding-top: 72px;
         }
         .header-bg {
             background-color: #ffffff; /* Latar belakang header putih */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bayangan ringan */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+            position: fixed; /* Membuat header tetap di posisi tertentu */
+            top: 0; /* Menempatkan header di bagian paling atas layar */
+            width: 100%; /* Memastikan header membentang selebar layar */
+            z-index: 1000; /* Memastikan header berada di atas konten lain */
         }
         .footer-bg {
             background-color: #202A4D; /* Warna biru gelap dari desain */
@@ -137,7 +142,7 @@
                 <span class="text-xl font-bold text-primary-blue">Cimory</span>
             </div>
             <ul class="flex space-x-6">
-                <li><a href="index.html" class="text-primary-blue hover:text-secondary-blue font-semibold">HOME</a></li>
+                <li><a href="index.html" class="text-secondary-blue font-bold">HOME</a></li>
                 <li><a href="menu.html" class="text-primary-blue hover:text-secondary-blue font-semibold">MENU</a></li>
                 <li><a href="galeri.html" class="text-primary-blue hover:text-secondary-blue font-semibold">GALERI</a></li>
                 <li><a href="news.html" class="text-primary-blue hover:text-secondary-blue font-semibold">NEWS</a></li>

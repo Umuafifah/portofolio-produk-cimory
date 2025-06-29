@@ -11,10 +11,15 @@
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #f7f7f7;
+            padding-top: 72px;
         }
         .header-bg {
             background-color: #ffffff;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed; /* Membuat header tetap di posisi tertentu */
+            top: 0; /* Menempatkan header di bagian paling atas layar */
+            width: 100%; /* Memastikan header membentang selebar layar */
+            z-index: 1000; /* Memastikan header berada di atas konten lain */
         }
         .footer-bg {
             background-color: #202A4D;
@@ -36,23 +41,31 @@
         .text-secondary-blue {
             color: #56C0E0;
         }
-        .variant-card {
+        .product-card {
             background-color: #ffffff;
-            border-radius: 1.5rem; /* Rounded corners */
+            border-radius: 1.5rem;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1.5rem;
         }
-        .variant-card:hover {
+        .product-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
-        .variant-image {
-            width: 80%; /* Adjust size */
-            height: auto;
-            border-radius: 1.5rem; /* Ensure rounded image */
-            display: block;
-            margin: 0 auto;
+        .product-card-image {
+            width: 150px; /* Fixed width for consistency */
+            height: 150px; /* Fixed height */
+            object-fit: contain; /* Ensure image fits without cropping */
+            margin-bottom: 1rem;
+            transform: rotate(15deg); /* Slight rotation for visual appeal */
+            transition: transform 0.3s ease;
+        }
+        .product-card:hover .product-card-image {
+            transform: rotate(0deg); /* Straighten on hover */
         }
     </style>
 </head>
@@ -66,7 +79,7 @@
             </div>
             <ul class="flex space-x-6">
                 <li><a href="index.html" class="text-primary-blue hover:text-secondary-blue font-semibold">HOME</a></li>
-                <li><a href="menu.html" class="text-primary-blue hover:text-secondary-blue font-semibold">MENU</a></li>
+                <li><a href="menu.html" class="text-secondary-blue font-bold">MENU</a></li>
                 <li><a href="galeri.html" class="text-primary-blue hover:text-secondary-blue font-semibold">GALERI</a></li>
                 <li><a href="news.html" class="text-primary-blue hover:text-secondary-blue font-semibold">NEWS</a></li>
                 <li><a href="lokasi.html" class="text-primary-blue hover:text-secondary-blue font-semibold">LOKASI</a></li>
@@ -76,38 +89,49 @@
 
     <main class="py-16 md:py-24">
         <section class="container mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold leading-tight text-primary-blue mb-4">
-                Pilih Varian Yang <br> Mau Kepoin!
+            <h1 class="text-4xl md:text-5xl font-bold leading-tight text-primary-blue mb-12">
+                Pilih Rasa Favoritmu!
             </h1>
-            <p class="text-lg text-gray-700 mb-8">
-                Ada banyak varian rasa lho! <br> Cobain satu-satu dijamin ketagihan deh!
-            </p>
 
-            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 max-w-4xl mx-auto">
-                <!-- Varian Original -->
-                <div class="variant-card p-4" onclick="location.href='menu_original.html'">
-                    <img src="assets/images/1.png" alt="Cimory Squeeze Original" class="variant-image mb-4">
-                    <p class="text-primary-blue font-semibold">Original</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
+                <!-- Product Card: Original -->
+                <div class="product-card">
+                    <img src="assets/images/1.png" alt="Cimory Squeeze Original" class="product-card-image">
+                    <h2 class="text-xl font-bold text-primary-blue mb-2">Original</h2>
+                    <p class="text-gray-700 text-sm mb-4">Kesegaran klasik yang tak lekang oleh waktu.</p>
+                    <a href="menu_original.html" class="btn-primary inline-block text-sm">Lihat Detail</a>
                 </div>
-                <!-- Varian Blueberry -->
-                <div class="variant-card p-4" onclick="location.href='menu_blueberry.html'">
-                    <img src="assets/images/2.png" alt="Cimory Squeeze Blueberry" class="variant-image mb-4">
-                    <p class="text-primary-blue font-semibold">Blueberry</p>
+
+                <!-- Product Card: Blueberry -->
+                <div class="product-card">
+                    <img src="assets/images/2.png" alt="Cimory Squeeze Blueberry" class="product-card-image">
+                    <h2 class="text-xl font-bold text-primary-blue mb-2">Blueberry</h2>
+                    <p class="text-gray-700 text-sm mb-4">Manisnya blueberry, kaya akan antioksidan.</p>
+                    <a href="menu_blueberry.html" class="btn-primary inline-block text-sm">Lihat Detail</a>
                 </div>
-                <!-- Varian Strawberry -->
-                <div class="variant-card p-4" onclick="location.href='menu_strawberry.html'">
-                    <img src="assets/images/3.png" alt="Cimory Squeeze Strawberry" class="variant-image mb-4">
-                    <p class="text-primary-blue font-semibold">Strawberry</p>
+
+                <!-- Product Card: Strawberry -->
+                <div class="product-card">
+                    <img src="assets/images/3.png" alt="Cimory Squeeze Strawberry" class="product-card-image">
+                    <h2 class="text-xl font-bold text-primary-blue mb-2">Strawberry</h2>
+                    <p class="text-gray-700 text-sm mb-4">Rasa stroberi segar yang bikin nagih.</p>
+                    <a href="menu_strawberry.html" class="btn-primary inline-block text-sm">Lihat Detail</a>
                 </div>
-                <!-- Varian Mango -->
-                <div class="variant-card p-4" onclick="location.href='menu_mango.html'">
-                    <img src="assets/images/4.png" alt="Cimory Squeeze Mango" class="variant-image mb-4">
-                    <p class="text-primary-blue font-semibold">Mango</p>
+
+                <!-- Product Card: Mango -->
+                <div class="product-card">
+                    <img src="assets/images/4.png" alt="Cimory Squeeze Mango" class="product-card-image">
+                    <h2 class="text-xl font-bold text-primary-blue mb-2">Mango</h2>
+                    <p class="text-gray-700 text-sm mb-4">Sensasi tropis mangga yang manis dan asam.</p>
+                    <a href="menu_mango.html" class="btn-primary inline-block text-sm">Lihat Detail</a>
                 </div>
-                <!-- Varian Taro -->
-                <div class="variant-card p-4" onclick="location.href='menu_taro.html'">
-                    <img src="assets/images/5.png" alt="Cimory Squeeze Taro" class="variant-image mb-4">
-                    <p class="text-primary-blue font-semibold">Taro</p>
+
+                <!-- Product Card: Taro -->
+                <div class="product-card">
+                    <img src="assets/images/5.png" alt="Cimory Squeeze Taro" class="product-card-image">
+                    <h2 class="text-xl font-bold text-primary-blue mb-2">Taro</h2>
+                    <p class="text-gray-700 text-sm mb-4">Uniknya rasa taro, lembut dan memanjakan lidah.</p>
+                    <a href="menu_taro.html" class="btn-primary inline-block text-sm">Lihat Detail</a>
                 </div>
             </div>
         </section>

@@ -11,10 +11,15 @@
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #f7f7f7;
+            padding-top: 72px;
         }
         .header-bg {
             background-color: #ffffff;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed; /* Membuat header tetap di posisi tertentu */
+            top: 0; /* Menempatkan header di bagian paling atas layar */
+            width: 100%; /* Memastikan header membentang selebar layar */
+            z-index: 1000; /* Memastikan header berada di atas konten lain */
         }
         .footer-bg {
             background-color: #202A4D;
@@ -65,15 +70,14 @@
     <header class="header-bg p-4 shadow-md">
         <nav class="container mx-auto flex items-center justify-between">
             <div class="flex items-center space-x-2">
-                <img src="assets/images/logo-cimory.png" alt="Cimory Logo" class="h-10">
-                <span class="text-xl font-bold text-primary-blue">Cimory</span>
+                <img src="assets/images/logo-cimory.png" alt="Cimory Logo" class="h-20"> 
             </div>
             <ul class="flex space-x-6">
                 <li><a href="index.html" class="text-primary-blue hover:text-secondary-blue font-semibold">HOME</a></li>
                 <li><a href="menu.html" class="text-primary-blue hover:text-secondary-blue font-semibold">MENU</a></li>
                 <li><a href="galeri.html" class="text-primary-blue hover:text-secondary-blue font-semibold">GALERI</a></li>
                 <li><a href="news.html" class="text-primary-blue hover:text-secondary-blue font-semibold">NEWS</a></li>
-                <li><a href="lokasi.html" class="text-primary-blue hover:text-secondary-blue font-semibold">LOKASI</a></li>
+                <li><a href="lokasi.html" class="text-secondary-blue font-bold">LOKASI</a></li>
             </ul>
         </nav>
     </header>

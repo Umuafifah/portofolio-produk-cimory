@@ -11,10 +11,15 @@
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #f7f7f7;
+            padding-top: 72px;
         }
         .header-bg {
             background-color: #ffffff;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed; /* Membuat header tetap di posisi tertentu */
+            top: 0; /* Menempatkan header di bagian paling atas layar */
+            width: 100%; /* Memastikan header membentang selebar layar */
+            z-index: 1000; /* Memastikan header berada di atas konten lain */
         }
         .footer-bg {
             background-color: #202A4D;
@@ -93,7 +98,7 @@
                 bottom: auto;
                 left: auto;
                 width: 40%; /* Ukuran disesuaikan untuk mobile */
-                transform: rotate(15deg);
+                transform: rotate(35deg);
             }
         }
     </style>
@@ -108,7 +113,7 @@
             </div>
             <ul class="flex space-x-6">
                 <li><a href="index.html" class="text-primary-blue hover:text-secondary-blue font-semibold">HOME</a></li>
-                <li><a href="menu.html" class="text-primary-blue hover:text-secondary-blue font-semibold">MENU</a></li>
+                <li><a href="menu.html" class="text-secondary-blue font-bold">MENU</a></li>
                 <li><a href="galeri.html" class="text-primary-blue hover:text-secondary-blue font-semibold">GALERI</a></li>
                 <li><a href="news.html" class="text-primary-blue hover:text-secondary-blue font-semibold">NEWS</a></li>
                 <li><a href="lokasi.html" class="text-primary-blue hover:text-secondary-blue font-semibold">LOKASI</a></li>
@@ -119,13 +124,13 @@
     <main class="py-16 md:py-24 bg-white">
         <section class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-12">
             <div class="md:w-1/2 flex justify-center relative"> <!-- Parent ini harus relative untuk absolute positioning splash -->
-                <!-- ✅ Percikan susu kiri bawah (sebelumnya kiri atas) -->
-                <img src="assets/images/mangkiri.jfif" alt="Percikan Susu Kiri Bawah" class="menu-splash menu-splash-top-left">
+                <!-- Percikan susu kiri atas -->
+                <img src="assets/images/mangkiri.jfif" alt="Mangga Kiri Atas" class="menu-splash menu-splash-top-left">
                 
-                <img src="assets/images/4.png" alt="Cimory Squeeze Original Product" class="product-image">
+                <img src="assets/images/4.png" alt="Cimory Squeeze Mango Product" class="product-image">
 
-                <!-- ✅ Percikan susu kanan atas (sebelumnya kanan bawah) -->
-                <img src="assets/images/mangkanan.jfif" alt="Percikan Susu Kanan Atas" class="menu-splash menu-splash-bottom-right">
+                <!-- Percikan susu kanan bawah -->
+                <img src="assets/images/mangkanan.jfif" alt="Mangga Kanan Atas" class="menu-splash menu-splash-bottom-right">
             </div>
             <div class="md:w-1/2 text-center md:text-left">
                 <h1 class="text-4xl md:text-5xl font-bold text-primary-blue mb-4">
@@ -136,7 +141,7 @@
                 </p>
                 <h2 class="text-2xl font-bold text-primary-blue mb-3">Komposisi:</h2>
                 <p class="text-lg text-gray-700 leading-relaxed mb-8">
-                    Terbuat dari Susu Sapi Segar, Kultur Bakteri Hidup, Gula, Buah Mangga Asli, Penstabil Nabati, Perisa Alami Mangga.
+                    Terbuat dari Susu Sapi Segar, Kultur Bakteri Hidup, Gula, Buah Mangga Asli, Penstabil Nabati, Perisa Alami Mangga, Pewarna Makanan.
                 </p>
 
                 <!-- Varian Thumbnail Navigation -->

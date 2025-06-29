@@ -40,7 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Lakukan validasi sederhana
             if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
-                alert('Semua kolom harus diisi!'); // Gunakan alert sebagai contoh, lebih baik pakai modal kustom
+                // Mengganti alert dengan modal kustom atau pesan di UI
+                console.error('Semua kolom harus diisi!');
+                // Contoh: tampilkan pesan error di elemen HTML
+                // document.getElementById('form-message').innerText = 'Semua kolom harus diisi!';
                 return;
             }
 
@@ -50,7 +53,10 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Pesan:', message);
 
             // Tampilkan pesan sukses kepada pengguna (bisa diganti dengan modal pop-up yang lebih menarik)
-            alert('Pesan Anda telah berhasil dikirim! Terima kasih.'); // Gunakan alert sebagai contoh
+            // Mengganti alert dengan modal kustom atau pesan di UI
+            console.log('Pesan Anda telah berhasil dikirim! Terima kasih.');
+            // Contoh: tampilkan pesan sukses di elemen HTML
+            // document.getElementById('form-message').innerText = 'Pesan Anda telah berhasil dikirim! Terima kasih.';
 
             // Reset form
             contactForm.reset();
